@@ -10,6 +10,7 @@
 
   runs:
     using: "composite"
+    id: v1
     steps:
       - name: "running a composite step"
         run: |

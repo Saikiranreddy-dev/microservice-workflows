@@ -20,5 +20,5 @@ jobs:
           git_token: ${{secrets.GITHUB_TOKEN}}
         run: |
           echo "print the statements";
-          echo  $token
+          echo  $git_token
         

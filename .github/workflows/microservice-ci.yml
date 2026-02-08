@@ -23,8 +23,9 @@ jobs:
       - name: running and printing the token value
         env:
           git_token: ${{secrets.GITHUB_TOKEN}}
+          variable: ${{inputs.variable1}}
         run: |
           echo "print the statements";
           echo  $git_token
-          echo $variable1
+          echo $variable
         

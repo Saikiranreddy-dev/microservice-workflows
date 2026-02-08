@@ -1,0 +1,17 @@
+ name: "another way of composite"
+ description: "using composite"
+
+ inputs:
+   from-date:
+     description: "using from date"
+     required: true
+     default: "2021/01/25"
+    
+
+  runs:
+    using: "composite"
+
+    steps:
+      - name: "running a composite step"
+        run: |
+         echo "fetching from the date ${{input.from-date}}"

@@ -1,0 +1,26 @@
+name: reusable workflows
+
+run-name: "getting the called file"
+
+on:
+  workflow_call:
+    inputs:
+      actor:
+        description: "the person who will recievw the greeting"
+        type: string
+        required: true
+
+
+jobs:
+   reusable:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v4
+       - name: "running a reusable file from microservice-workflows"
+         env:
+           actor: ${{inputs.actor}}
+         run: |
+           echo " printing the actor value"
+           echo "well done $actor you've implemented reusable workflows successfully!"
+          
+  

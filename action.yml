@@ -14,5 +14,5 @@
     steps:
       - name: "running a composite step"
         run: |
-         echo "fetching from the date ${{input.from-date}}"
+         echo "fetching from the date ${{inputs.from-date}}"
         shell: bash

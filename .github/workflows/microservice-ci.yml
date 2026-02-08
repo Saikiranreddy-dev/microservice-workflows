@@ -1,1 +1,24 @@
+name: reusable-workflow
+run-name: running a called workflow
 
+on:
+  workflow_call:
+    secrets:
+      required: true
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+      - name: running and printing the token value
+        env:
+          git_token: ${{secrets.GITHUB_TOKEN}}
+        run: |
+          echo "print the statements";
+          echo  $git_token
+        

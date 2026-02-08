@@ -6,6 +6,8 @@ on:
     secrets:
      token:
       required: true
+     variable:
+      required: true
     inputs:
       variable1:
         description: "the value is required just for testing purpose"

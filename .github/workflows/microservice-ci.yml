@@ -4,6 +4,7 @@ run-name: running a called workflow
 on:
   workflow_call:
     secrets:
+     token:
       required: true
 jobs:
   test:

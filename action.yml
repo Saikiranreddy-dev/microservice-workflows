@@ -2,18 +2,18 @@
  description: "using composite"
 
  inputs:
-   from-date:
-     description: "using from date"
-     required: true
-     default: "2021/01/25"
+  from-date:
+   description: "using from date"
+   required: true
+   default: "2021/01/25"
     
 
-  runs:
-    using: "composite"
-    steps:
-      - name: "running a composite step"
-        env:
-         input: ${{inputs.from-date}}
-        run: |
-         echo "fetching from the date $input"
-        shell: bash
+ runs:
+   using: "composite"
+   steps:
+     - name: "running a composite step"
+       env:
+        input: ${{inputs.from-date}}
+       run: |
+        echo "fetching from the date $input"
+       shell: bash
